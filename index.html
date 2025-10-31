@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>html5 – traadiraam</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Kõik kastid on musta raamiga */
+      header,
+      nav,
+      main,
+      section,
+      article,
+      aside,
+      footer,
+      div {
+        border: 2px solid black;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      .horizontal-list li {
+        display: block;
+      }
+
+      /* Lihtne paigutus suurel ekraanil */
+      @media (min-width: 700px) {
+        .promos {
+          display: flex;
+          gap: 10px;
+        }
+
+        .horizontal-list li {
+          display: inline;
+        }
+        .content {
+          flex-direction: column;
+          display: flex;
+          gap: 10px;
+        }
+
+        article {
+          flex: 2;
+        }
+
+        .description {
+          width: 30%;
+          float: right;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main">Skip to content</a>
+
+    <header>
+      <h1>Bränd / Logo</h1>
+      <nav>
+        <ul class="horizontal-list">
+          <li>Link 1</li>
+          <li>Link 2</li>
+          <li>Link 3</li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Otsinguala</h2>
+    </section>
+
+    <div class="promos">
+      <div>Promo 1</div>
+      <div>Promo 2</div>
+      <div>Promo 3</div>
+    </div>
+
+    <main id="main">
+      <h2>Põhisisu</h2>
+      <section class="content">
+        <h3>Populaased sihtkohad</h3>
+        <article>
+          <h4>Artikkel 1.</h4>
+          <aside class="description">
+            <h4>Lisainfo</h4>
+          </aside>
+        </article>
+        <article>
+          <h4>Artikkel 2.</h4>
+          <aside class="description">
+            <h4>Lisainfo</h4>
+          </aside>
+        </article>
+        <article>
+          <h4>Artikkel 3.</h4>
+          <aside class="description">
+            <h4>Lisainfo</h4>
+          </aside>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <h2>Jalus</h2>
+      <p>Kontakt või lingid.</p>
+    </footer>
+  </body>
+</html>
